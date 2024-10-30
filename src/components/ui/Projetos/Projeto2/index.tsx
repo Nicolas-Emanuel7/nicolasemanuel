@@ -15,7 +15,6 @@ function CardProjeto2() {
     <div className="flex justify-center p-4">
       <Card className="lg:w-[800px] w-full bg-cover bg-center relative p-10 overflow-hidden h-auto min-h-[300px] text-white bg-fourth flex flex-col justify-between">
         <div className="absolute top-0 left-0 w-full h-full bg-third clip-triangle z-0"></div>
-        
         <CardHeader className="relative z-10">
           <CardTitle className="flex justify-between text-[100%] sm:text-2xl h-[30px] mb-4 sm:mb-auto sm:h-auto">
             Site de Grupos de Conversa <Users />

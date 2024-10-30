@@ -15,7 +15,7 @@ export default function Theme() {
     <div className="my-3">
       <Button 
         onClick={toggleTheme} 
-        className="p-2 bg-transparent border-none hover:bg-cor-link dark:hover:bg-cor-link flex items-center rounded-full"
+        className="p-2 bg-transparent border-none  hover:bg-third flex items-center rounded-full"
       >
         
         {theme === 'dark' ? (

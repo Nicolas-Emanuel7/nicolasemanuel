@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "../components/ui/Navbar";
 import { ThemeProvider } from "@/providers/theme-provider";
 import CustomCursor from "@/components/ui/CursorLed";
 
@@ -23,11 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem
           disableTransitionOnChange
         >
-          {/* Componente do cursor LED */}
           <CustomCursor />
-
-          {/* Navbar e o conteúdo da página */}
-          <Navbar />
           {children}
         </ThemeProvider>
       </body>

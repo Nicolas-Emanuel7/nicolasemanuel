@@ -24,18 +24,18 @@ export default function Navbar() {
 
           {/* Menu Links */}
           <div className="hidden md:flex space-x-2">
-            <Link href="#s1" className="link-hover-bg transition rounded px-3 py-1">Início</Link>
-            <Link href="#s2" className="link-hover-bg transition rounded px-3 py-1">Sobre</Link>
-            <Link href="#s3" className="link-hover-bg transition rounded px-3 py-1">Habilidades</Link>
-            <Link href="#s4" className="link-hover-bg transition rounded px-3 py-1">Projeto</Link>
-            <Link href="#s5" className="link-hover-bg transition rounded px-3 py-1">Contato</Link>
+            <Link href="#s1" className="hover:bg-third transition rounded px-3 py-1">Início</Link>
+            <Link href="#s2" className="hover:bg-third transition rounded px-3 py-1">Sobre</Link>
+            <Link href="#s3" className="hover:bg-third transition rounded px-3 py-1">Habilidades</Link>
+            <Link href="#s4" className="hover:bg-third transition rounded px-3 py-1">Projeto</Link>
+            <Link href="#s5" className="hover:bg-third transition rounded px-3 py-1">Contato</Link>
           </div>
 
           <div className="ml-2 hidden md:flex">
             <Theme />
           </div>
 
-          <div className="text-2xl text-third-foreground absolute right-4 flex text-td font-bebas text-shadow">
+          <div className="text-2xl text-third-foreground hover:text-third absolute right-4 flex text-td font-bebas text-shadow">
             <Link href="#s1">Nicolas Emanuel</Link> 
           </div>
         </div>
@@ -55,7 +55,12 @@ export default function Navbar() {
             { href: "#s4", icon: <Folder className="w-6 h-6" />, text: "Projetos" },
             { href: "#s5", icon: <Mails className="w-6 h-6" />, text: "Contato" },
           ].map(({ href, icon, text }) => (
-            <Link key={href} href={href} className="flex items-center p-2 cursor-pointer link-hover-bg hover:rounded"> 
+            <Link 
+              key={href} 
+              href={href} 
+              className="flex items-center p-2 cursor-pointer hover:bg-third hover:rounded " 
+              onClick={() => setIsOpen(false)} 
+            > 
               {icon}
               <span className="ml-2 text-xl">{text}</span>
             </Link>
@@ -65,7 +70,7 @@ export default function Navbar() {
         {/* Botão de Troca de Tema */}
         <div className="absolute bottom-4 left-4 flex items-center space-x-2">
           <Theme />
-          <span className="text-xl text-td">Tema</span>
+          <span className="text-xl">Tema</span>
         </div>
       </div>
     </>

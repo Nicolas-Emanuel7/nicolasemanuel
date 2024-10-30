@@ -9,14 +9,15 @@ const config: Config = {
   ],
   theme: {
   	extend: {
-		fontFamily: {
-			anton: ["Anton", 'sans-serif'],
-			bebas: ['"Bebas Neue"', 'cursive'],
-			ovo: ['Ovo', 'serif'],
-		  },
-		  backgroundImage: {
-			'custom-gradient-tema1': 'linear-gradient(180deg, rgba(19,2,8,1) 0%, rgba(124,24,60,1) 59%, rgba(213,60,106,1) 100%)',
-		  },
+  		fontFamily: {
+  			anton: ["Anton", 'sans-serif'],
+  			bebas: ['Bebas Neue', 'cursive'],
+  			ovo: ['Ovo', 'serif']
+  		},
+  		backgroundImage: {
+  			'custom-gradient-tema1': 'linear-gradient(180deg, rgba(19,2,8,1) 0%, rgba(124,24,60,1) 59%, rgba(213,60,106,1) 100%)'
+  		},
+		
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -36,13 +37,13 @@ const config: Config = {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
-			third: {
-				DEFAULT: 'hsl(var(--third))',
-				foreground: 'hsl(var(--third-foreground))'
-			},
-			fourth: {
-				DEFAULT: 'hsl(14, 17.3%, 14.3%)', // Adicione a cor fourth aqui
-			  },
+  			third: {
+  				DEFAULT: 'hsl(var(--third))',
+  				foreground: 'hsl(var(--third-foreground))'
+  			},
+  			fourth: {
+  				DEFAULT: 'hsl(14, 17.3%, 14.3%)'
+  			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
   				foreground: 'hsl(var(--muted-foreground))'
@@ -70,6 +71,24 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		animation: {
+  			meteor: 'meteor 5s linear infinite'
+  		},
+  		keyframes: {
+  			meteor: {
+  				'0%': {
+  					transform: 'rotate(215deg) translateX(0)',
+  					opacity: '1'
+  				},
+  				'70%': {
+  					opacity: '1'
+  				},
+  				'100%': {
+  					transform: 'rotate(215deg) translateX(-500px)',
+  					opacity: '0'
+  				}
+  			}
   		}
   	}
   },

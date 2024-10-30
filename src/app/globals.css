@@ -17,7 +17,7 @@
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 100%;
     --third: 290, 48.3%, 20.2%;
-    --third-foreground: 10, 63%, 45%;
+    --third-foreground: 354, 4%, 50%;
     --fourth: 14, 17.3%, 14.3%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
@@ -68,25 +68,10 @@
   clip-path: polygon(0 0, 50% 0, 0 100%);
 }
 
-.link-hover-bg:hover {
-  background-color:  var(--secondary); 
-}
-
 @layer utilities {
-
   .invert {
     filter: invert(1);
   }
-  
-  .elemento-light{
-    filter: invert(1) sepia(1) saturate(100%)  brightness(0.1);
-  }
-
-  .filtro {
-    filter: sepia(1) saturate(1000%) hue-rotate(270deg) brightness(0.8) !important;
-  }
-  
- 
 }
 
 .scroll-offset {
@@ -148,13 +133,3 @@
   animation: border-spin 8s linear infinite;
 }
 
-@layer utilities {
-  .glass {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); 
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  }
-}
